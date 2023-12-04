@@ -21,6 +21,7 @@ pipeline {
                 script {
                     sh 'docker pull malikayra/final-3:latest'
                     sh 'docker run -p 8081:8081 --name final-3-container -d malikayra/final-3:latest'
+
                 }
             }
         }
