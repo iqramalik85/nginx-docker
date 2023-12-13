@@ -13,7 +13,6 @@ pipeline {
                     sh 'docker login -u malikayra -p dckr_pat_zW1rQpFHx1_WffRYRQLm--qNOwQ'
 
                     sh 'docker push malikayra/final-7:latest'
-
                 }
             }
         }
