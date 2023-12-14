@@ -8,11 +8,11 @@ pipeline {
                     
                     git 'https://github.com/iqramalik85/nginx-docker.git'
                     
-                    sh 'docker build -t malikayra/final-7:latest .'
+                    sh 'docker build -t malikayra/final-8:latest .'
 
                     sh 'docker login -u malikayra -p dckr_pat_zW1rQpFHx1_WffRYRQLm--qNOwQ'
 
-                    sh 'docker push malikayra/final-7:latest'
+                    sh 'docker push malikayra/final-8:latest'
 
 
                 }
@@ -22,8 +22,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh 'docker pull malikayra/final-7:latest'
-                    sh 'docker run -p 8081:8081 --name final-7-container -d malikayra/final-7:latest'
+                    sh 'docker pull malikayra/final-8:latest'
+                    sh 'docker run -p 8081:8081 --name final-8-container -d malikayra/final-8:latest'
                 }
             }
         }
